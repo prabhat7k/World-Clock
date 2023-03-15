@@ -73,7 +73,9 @@ function setUTC() {
 		"November",
 		"December",
 	];
-
+	hhand.style.transform = `rotate(${hour * 30 + min / 2}deg)`;
+	mhand.style.transform = `rotate(${6 * min + sec / 10}deg)`;
+	shand.style.transform = `rotate(${sec * 6}deg)`;
 	//document.getElementById("time").innerHTML = hour + ':' + min + ':' + sec;
 	document.getElementById("hr").innerHTML = hour;
 	document.getElementById("min").innerHTML = min;
@@ -89,7 +91,6 @@ function setUTC() {
 }
 
 function darkMode() {
-	console.log("dark mode worked");
 	var element = document.getElementById("container");
 	element.classList.toggle("dark-mode");
 	var element = document.getElementById("footer");
@@ -98,6 +99,8 @@ function darkMode() {
 	element.classList.toggle("dark-mode");
 	var element = document.getElementById("header");
 	element.classList.toggle("dark-mode");
+	var element = document.getElementById("analog");
+	element.classList.toggle("invert");
 }
 
 setInterval(setUTC, 1000);

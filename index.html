@@ -13,8 +13,8 @@
 </head>
 
 <body>
-    <div class="container container-block">
-        <div class="row time mx-auto" id="header">
+    <div class="container container-block mtop">
+        <div class="row time mx-auto " id="header">
             <h3 id="head">World Clock</h1>
                 <h1 id="fullDate">Monday, January 00, 0000</h1>
                 <h1 id="country"></h1>
@@ -27,10 +27,8 @@
             <h1 class="st2">:</h1>
             <h1 class="st1" id="sec">00</h1>
 
-            <select class="form-control dropdown" onchange="setUTC()" id="selectUTC">
-                <option value="UnitedStates" class="dropdown">United States</option>
+            <select class="form-control dropdown " onchange="setUTC()" id="selectUTC">
                 <option value="India" class="dropdown">India</option>
-                <option value="UnitedKingdom" class="dropdown">United Kingdom</option>
                 <option value="Japan" class="dropdown">Japan</option>
                 <option value="Canada" class="dropdown">Canada</option>
                 <option value="Australia" class="dropdown">Australia</option>
@@ -48,9 +46,17 @@
                 <option value="Pakistan" class="dropdown">Pakistan</option>
                 <option value="SouthKorea" class="dropdown">South Korea</option>
                 <option value="Indonesia" class="dropdown">Indonesia</option>
+                <option value="UnitedKingdom" class="dropdown">United Kingdom</option>
+                <option value="UnitedStates" class="dropdown">United States</option>
             </select>
+            <div id="analog">
+                <div id="circlepoint"></div>
+                <div id="hhand" class="hand"></div>
+                <div id="mhand" class="hand"></div>
+                <div id="shand" class="hand"></div>
+            </div>
         </div>
-        <div class="footer" id="footer">
+        <div class="footer " id="footer">
             <button class="btn btn-secondary" onclick="darkMode()">Light/Dark mode</button>
         </div>
 
