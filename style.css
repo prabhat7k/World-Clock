@@ -174,5 +174,9 @@ a {
         height: 200px;
         width: 200px;
     }
+     .footer {
+        position: relative;
+        margin-top: 10vh;
+    }
  }
 
